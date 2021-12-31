@@ -1,0 +1,11 @@
+{% from "common/_formhelpers.html" import render_field %}
+<div class="section_pad"  id="{{section.id}}">
+    <section class="ml-2 mr-2 p-2 rounded ">
+    <div class="col-12">
+        <h6><strong>{{section.display}}</strong></h6>
+        {% block content %}
+
+        {% endblock %}
+    </div>
+    </section>
+</div>    

@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand mb-0 p-2 top_header">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarToggler">
+      <ul class="navbar-nav mr-auto mt-0 mt-lg-0">
+        <li class="nav-link">
+        <strong>{{ state_vars.brand }}</strong>
+      </li>
+
+        {% if form %}
+            {{ sections }}
+            {% for section in form.sections %}
+            <li class="nav-link"><a href="{{ section.anchor }}"><span class="fa fa-home solo">&nbsp;</span>{{ section.display }}</a></li>
+            {% endfor %}
+        {% endif %}
+
+<li class='nav-link'>&nbsp;</li>
+
+      </ul>
+
+      <ul class="navbar-right mb-0">
+     
+    </ul>
+
+    </div>
+  </nav>
+
+

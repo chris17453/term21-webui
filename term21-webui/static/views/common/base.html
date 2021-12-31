@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html style="height:100%" class="theme_css">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{title}}</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/media/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    
+    <link href="/media/css/base.css" rel="stylesheet">
+    <link href="/media/css/term21.css" rel="stylesheet">
+    <script src="/media/jquery-ui/external/jquery/jquery.js"></script>
+    <script src="/media/jquery-ui/jquery-ui.min.js"></script>
+    <link href="/media/jquery-ui/jquery-ui.css" rel="stylesheet">
+    <script src="/media/bootstrap/js/bootstrap.min.js"></script>
+    <link href="/media/fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="/media/fontawesome/css/brands.css" rel="stylesheet">
+    <link href="/media/fontawesome/css/solid.css" rel="stylesheet">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/media/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/media/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/media/images/favicon-16x16.png">
+  
+    
+    
+</head>
+{% set header_css="theme_css" %}
+{% set wrapper_css="theme_css" %}
+<body>
+  {% include "common/header.html" %}
+  <div class="wrapper">
+    <div id="content" >
+      {% include "common/messages.html" %}
+    {% block content %}
+    {% endblock %}
+    {% include "common/footer.html" %}
+  </div>
+  
+  </div>
+      
+</body>
+</html>
+
