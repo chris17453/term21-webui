@@ -32,10 +32,10 @@
 <body>
   {% include "common/header.html" %}
   <div class="wrapper">
-    <div id="content" >
+      
       {% include "common/messages.html" %}
-    {% block content %}
-    {% endblock %}
+        {% block content %}
+      {% endblock %}
     {% include "common/footer.html" %}
   </div>
   
@@ -43,4 +43,5 @@
       
 </body>
 </html>
+
 

@@ -4,27 +4,24 @@
     </button>
   
     <div class="collapse navbar-collapse" id="navbarToggler">
-      <ul class="navbar-nav mr-auto mt-0 mt-lg-0">
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
         <li class="nav-link">
-        <strong>{{ state_vars.brand }}</strong>
-      </li>
+          <strong>Term21</strong>
+        </li>
 
-        {% if form %}
-            {{ sections }}
-            {% for section in form.sections %}
-            <li class="nav-link"><a href="{{ section.anchor }}"><span class="fa fa-home solo">&nbsp;</span>{{ section.display }}</a></li>
-            {% endfor %}
-        {% endif %}
+ 
 
-<li class='nav-link'>&nbsp;</li>
-
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-layers-tab" data-bs-toggle="pill" data-bs-target="#pills-layers" type="button" role="tab" aria-controls="pills-layers" aria-selected="false">Layers</button>
+        </li>
       </ul>
-
-      <ul class="navbar-right mb-0">
-     
-    </ul>
 
     </div>
   </nav>
+
+
 
 

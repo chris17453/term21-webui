@@ -14,7 +14,7 @@ api= Blueprint('api', __name__,
 
 @api.route('/')
 def home():
-    return render_template("home/home.html",state_vars=session)
+    return render_template("app/app.html",state_vars=session)
 
 
 

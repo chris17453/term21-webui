@@ -1,10 +1,9 @@
-<!-- templates/index.html -->
-
-{% extends "common/base.html" %}
-
 {% block content %}
-<h1 class="title">
-Home</h1>
+
+
+<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+<h1 class="title">Home</h1>
 
 
 <canvas  id="myCanvas" width="640" height="400" style="border:1px solid"></canvas>
@@ -30,7 +29,9 @@ Home</h1>
     <div class="box__uploading">Uploading&hellip;</div>
     <div class="box__error">Error! </div>
     </form> 
-</body>
+
+</div>
+
 <script type="text/javascript">
 
 class sprite{

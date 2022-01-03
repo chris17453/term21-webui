@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Dec 31 07:20:45 2021
+# Make data base, printed on Sun Jan  2 13:51:59 2022
 
 # Variables
 
@@ -27,7 +27,7 @@ UUID = 8c6dfce5-eaf5-48d6-8d90-392156b0749d
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-c95ebd06-2898-4b8d-a44a-f22f7433a649.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-6cd991c2-f9ea-4f06-b624-2802f8e0d23a.sock
 # environment
 VSCODE_CWD = /home/nd
 # environment
@@ -126,7 +126,7 @@ MAKEFILE_LIST := Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 6057
+VSCODE_PID = 24313
 # environment
 SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS = 0
 # environment
@@ -134,7 +134,7 @@ XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/unix:@/tmp/.ICE-unix/2990,unix/unix:/tmp/.ICE-unix/2990
+SESSION_MANAGER = local/unix:@/tmp/.ICE-unix/2983,unix/unix:/tmp/.ICE-unix/2983
 # automatic
 *F = $(notdir $*)
 # environment
@@ -185,7 +185,7 @@ MODULESHOME = /usr/share/lmod/lmod
 # environment
 LMOD_sys = Linux
 # environment
-INVOCATION_ID = 735e927fb2b04b0eaed7d6d7d08f875c
+INVOCATION_ID = 2a1453c230bf48a691d0e2b2fde42b57
 # environment
 VSCODE_LOG_NATIVE = false
 # environment
@@ -215,7 +215,7 @@ BASH_ENV = /usr/share/lmod/lmod/init/bash
 # makefile
 .DEFAULT_GOAL := build
 # environment
-SYSTEMD_EXEC_PID = 3610
+SYSTEMD_EXEC_PID = 3008
 # environment
 MODULEPATH_ROOT = /usr/share/modulefiles
 # environment
@@ -229,21 +229,21 @@ USER = nd
 # default
 MAKE_VERSION := 4.3
 # environment
-MANAGERPID = 2811
+MANAGERPID = 2815
 # environment
 which_declare = declare -f
 # environment
 DEBUGINFOD_URLS = https://debuginfod.fedoraproject.org/ 
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 6057
+GIO_LAUNCHED_DESKTOP_FILE_PID = 24313
 # environment
-SSH_AGENT_PID = 2939
+SSH_AGENT_PID = 2931
 # environment
 _ = /usr/bin/make
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
-JOURNAL_STREAM = 8:86019
+JOURNAL_STREAM = 8:36546
 # environment
 GOLANG_EXECUTABLE = go
 # environment
@@ -285,9 +285,9 @@ GDMSESSION = gnome
 
 # Directories
 
-# . (device 64768, inode 46272584): 6 files, no impossibilities.
+# . (device 64768, inode 46272584): 7 files, no impossibilities.
 
-# 6 files, no impossibilities in 1 directories.
+# 7 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -295,10 +295,10 @@ GDMSESSION = gnome
 
 # Files
 
- 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
+ 
 #  Last modified 2021-12-29 08:23:55.346953422
 #  File has been updated.
 #  Successfully updated.
@@ -345,12 +345,12 @@ build:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 14 / storage = 116 B / avg = 8 B
-# current buf: size = 8162 B / used = 116 B / count = 14 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 15 / storage = 121 B / avg = 8 B
+# current buf: size = 8162 B / used = 121 B / count = 15 / avg = 8 B
 
-# strcache performance: lookups = 22 / hit rate = 36%
+# strcache performance: lookups = 23 / hit rate = 34%
 # hash-table stats:
-# Load=14/8192=0%, Rehash=0, Collisions=0/22=0%
-# Finished Make data base on Fri Dec 31 07:20:45 2021
+# Load=15/8192=0%, Rehash=0, Collisions=0/23=0%
+# Finished Make data base on Sun Jan  2 13:51:59 2022
 
  
