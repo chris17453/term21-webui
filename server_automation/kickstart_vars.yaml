@@ -1,0 +1,20 @@
+---
+- vcenter_hostname: 10.7.0.30
+- vcenter_username: administrator@watkinslabs.com
+- vcenter_password: p825amwX$
+- vcenter_dc: dc1
+- vcenter_dc_cluster: 
+- vcenter_datastore: DS2
+- vCenter_folder: 
+- vcenter_network: 
+- vcenter_iso_path: [DS2] ISO/rhel-8.5-x86_64-dvd.iso
+- vm_hostname: qa_rancher_01
+- vm_memory: 4096
+- vm_cpu_count:  2
+- vm_cores_per_socket: 2
+- vm_drive_0_size: 25G
+- httpd_ip: 192.168.0.1
+- httpd_port: 
+- kickstart_file: kickstart.cfg
+
+=-0

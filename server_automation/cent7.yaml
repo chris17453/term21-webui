@@ -1,0 +1,64 @@
+---
+- hosts: localhost
+  gather_facts: no
+  vars_files:
+    - vcenter_vars.yml
+  vars:
+    hostname: kickstart_vm
+  tasks:
+  - name: Boot VM with CentOS 7 installation iso in CDROM
+    vmware_guest:
+      validate_certs: False
+      hostname: '{{ vcenter_hostname }}'
+      username: '{{ vcenter_username }}'
+      password: '{{ vcenter_password }}'
+      datacenter: "{{ vcenter_dc }}"
+      state: poweredon
+      cluster: {{ vcenter_dc }}
+      disk:
+        - size_gb: {{ vm_drive_0_size }}
+          type: thin
+          datastore: {{ vcenter_datastore }}
+      cdrom:
+        - controller_number: 0
+          unit_number: 0
+          state: present
+          type: iso
+          iso_path: {{ vcenter_iso_path }}
+      hardware:
+        memory_mb: {{ vm_memory }}
+        num_cpus: {{ vm_cpu_count }}
+        num_cpu_cores_per_socket: {{ vm_cores_per_socket }}
+      name:  "{{ vm_hostname }}"
+      folder: {{ vcenter_folder }}
+      guest_id: centos7_64Guest
+      networks:
+        - name: {{ vcenter_network }}
+
+  - name: Handle boot parameter
+    vmware_guest_sendkey:
+      validate_certs: False
+      hostname: "{{ vcenter_hostname }}"
+      username: "{{ vcenter_username }}"
+      password: "{{ vcenter_password }}"
+      name: "{{ hostname }}"
+      keys_send:
+        - ESC
+        - ESC
+      string_send: 'vmlinuz initrd=initrd.img inst.ks=http://{{ httpd_ip }}:{{ httpd_port }}/{{ kickstart_file }}'
+    delegate_to: localhost
+    vars:
+      kickstart_file: {{ vm_kickstart_file }}
+      httpd_ip: 192.168.10.1
+      httpd_port: 9000
+
+  - name: Start installation after providing boot parameter at installation prompt
+    vmware_guest_sendkey:
+      validate_certs: False
+      hostname: "{{ vcenter_hostname }}"
+      username: "{{ vcenter_username }}"
+      password: "{{ vcenter_password }}"
+      name: "{{ hostname }}"
+      keys_send:
+        - ENTER
+    delegate_to: localhost
